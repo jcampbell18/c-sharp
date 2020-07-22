@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "campbelljcscd371hw0/1.0.0": {
+        "runtime": {
+          "campbelljcscd371hw0.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "campbelljcscd371hw0/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

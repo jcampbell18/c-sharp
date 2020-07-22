@@ -1,0 +1,13 @@
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\bin\Debug\netcoreapp3.1\campbelljcscd371hw0.exe
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\bin\Debug\netcoreapp3.1\campbelljcscd371hw0.deps.json
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\bin\Debug\netcoreapp3.1\campbelljcscd371hw0.runtimeconfig.json
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\bin\Debug\netcoreapp3.1\campbelljcscd371hw0.runtimeconfig.dev.json
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\bin\Debug\netcoreapp3.1\campbelljcscd371hw0.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\bin\Debug\netcoreapp3.1\campbelljcscd371hw0.pdb
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.AssemblyInfoInputs.cache
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.AssemblyInfo.cs
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.csproj.CoreCompileInputs.cache
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.pdb
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.genruntimeconfig.cache
+C:\Users\jcryu\source\repos\campbelljcscd371hw0\campbelljcscd371hw0\obj\Debug\netcoreapp3.1\campbelljcscd371hw0.csprojAssemblyReference.cache
