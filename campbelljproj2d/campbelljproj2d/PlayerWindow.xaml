@@ -1,0 +1,108 @@
+﻿<Window x:Class="campbelljproj2d.PlayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:campbelljproj2d"
+        mc:Ignorable="d"
+        Title="Player Information"
+        WindowStartupLocation="CenterScreen"
+        Height="285" 
+        Width="355">
+    <Grid>
+        <Label
+            x:Name="lblPlayerName"
+            Content="Player's Name:"
+            HorizontalAlignment="Left"
+            HorizontalContentAlignment="Right"           
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Margin="10,20,0,0"
+            Width="90"
+            Height="40"/>
+        <TextBox
+            x:Name="tbPlayerName"
+            Text=""
+            TextWrapping="Wrap"
+            MaxLength="15"
+            HorizontalAlignment="Left"
+            HorizontalContentAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Margin="105,20,0,0"  
+            Width="200"
+            Height="40"/>
+        <Label 
+            x:Name="lblCharRestrict"
+            Content="(up to 15 characters)" 
+            HorizontalAlignment="Left"   
+            HorizontalContentAlignment="Center"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Top"
+            Margin="105,60,0,0"
+            Width="200"
+            Height="25" FontStyle="Italic" FontSize="10"/>
+
+        <Label 
+            x:Name="lblMazeSize"
+            Content="Maze Size:" 
+            HorizontalAlignment="Left"
+            HorizontalContentAlignment="Right"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Margin="10,87,0,0"
+            Width="90"
+            Height="40"/>
+
+        <ComboBox x:Name="cbMazeSize" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="105,95,0,0"
+            Width="200">
+
+            <ComboBoxItem>2x2 (4 rooms)</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">3x3 (9 rooms)</ComboBoxItem>
+            <ComboBoxItem>4x4 (16 rooms)</ComboBoxItem>
+            <ComboBoxItem>5x5 (25 rooms)</ComboBoxItem>
+
+        </ComboBox>
+
+        <Label 
+            x:Name="lblCategory"
+            Content="Trivia Category" 
+            HorizontalAlignment="Left"
+            HorizontalContentAlignment="Center"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Margin="10,130,0,0"
+            Width="90"
+            Height="40"/>
+
+        <ComboBox x:Name="cbCategory" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="105,140,0,0"
+            Width="200">
+
+            <ComboBoxItem>Mixed Trivia</ComboBoxItem>
+            <ComboBoxItem>Geography</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Entertainment</ComboBoxItem>
+            <!--<ComboBoxItem>History</ComboBoxItem>
+            <ComboBoxItem>Arts and Literature</ComboBoxItem>
+            <ComboBoxItem>Science and Nature</ComboBoxItem>
+            <ComboBoxItem>Sports and Leisure</ComboBoxItem>-->
+
+        </ComboBox>
+
+        <Button 
+            x:Name="btnSubmit"
+            Content="Submit" 
+            Click="OnSubmit"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="230,190,0,0"
+            Width="75"
+            Height="40"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="campbelljproj2d.RoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:campbelljproj2d"
+        mc:Ignorable="d"
+        
+        Title="Question" Height="494" Width="365" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock x:Name="tbQuestion" Text="" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="298" Height="75" FontSize="16"/>
+        <RadioButton x:Name="rbChoice1" Content="" IsEnabled="True" HorizontalAlignment="Left" Margin="40,100,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <RadioButton x:Name="rbChoice2" Content="" IsEnabled="True" HorizontalAlignment="Left" Margin="40,130,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <RadioButton x:Name="rbChoice3" Content="" IsEnabled="True" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+        <Button x:Name="btnCancel" IsEnabled="True"  Content="Cancel" HorizontalAlignment="Left"   Margin="24,210,0,0"   VerticalAlignment="Top" Width="75" Click="OnCancel"  FontSize="16"/>
+        <Button x:Name="btnSubmit" IsEnabled="True" Content="Submit" HorizontalAlignment="Left" Margin="210,210,59,0" VerticalAlignment="Top" Width="75" Click="OnSubmit" FontSize="16" />
+
+        <TextBlock x:Name="tbAnswer" Text="" TextAlignment="Center" HorizontalAlignment="Left" Margin="10,258,0,0" VerticalAlignment="Top" Width="337" Height="42" FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="tbAnswerInfo" Text="" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Left" Margin="10,305,0,0" VerticalAlignment="Top" Width="337" Height="54" FontSize="16" />
+        <Button x:Name="btnClose" Content="Close" IsEnabled="False" HorizontalAlignment="Center" Margin="0,390,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0,0.65" Click="OnClose" FontSize="16" />
+
+    </Grid>
+</Window>

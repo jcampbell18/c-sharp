@@ -1,0 +1,140 @@
+﻿<Window x:Class="campbelljmidterm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:campbelljmidterm"
+        mc:Ignorable="d"
+        Title="File Watcher" Height="600" Width="1172">
+
+    <Grid x:Name="mainGrid" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="190*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Main Menu-->
+        <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="1164" Background="White" Foreground="Black" Grid.ColumnSpan="3">
+            <MenuItem x:Name="menuItemFile" Header="_File" Foreground="Black">
+                <MenuItem x:Name="menuItemChoosePath" Header="_Choose Filewatcher Path/Ext" IsEnabled="True" Click="OnChoosePath" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Select the Path and Extension</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuItemStartFW" Header="_Start Filewatcher" IsEnabled="False" Click="OnStart" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Start Monitoring the Selected Path</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuItemStopFW" Header="S_top Filewatcher" IsEnabled="False" Click="OnStop" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Stop Monitoring the Selected Path</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuItemReadDB"  Header="_View Database Results" IsEnabled="True" Click="OnReadDatabase" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip>View Database Records</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuItemWriteDB"  Header="_Write Results to Database" IsEnabled="False" Click="OnWriteDatabase" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Write Results to Database</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="menuItemExit" Header="E_xit" Click="OnExit" Foreground="Black">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Exit the program</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="menuItemEdit" Header="_Edit">
+                <MenuItem x:Name="menuItemToolbarShortcuts" Header="Show Tool_bar" IsChecked="True" Click="OnToolbarShortcuts">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Show Toolbar Shortcuts</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem x:Name="menuItemDarkula" Header="_Darkula Theme" IsCheckable="True" Click="OnChangeTheme">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Enable/Disable Darkula Theme</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="menuItemHelp" Header="_Help">
+                <MenuItem x:Name="menuItemAbout" Header="_About" Click="OnAbout">
+                    <MenuItem.ToolTip>
+                        <ToolTip>About the program</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!--Toolbar Section-->
+        <ToolBar x:Name="toolBar" HorizontalAlignment="Left" Height="40" Margin="0,20,0,0" VerticalAlignment="Top" Width="1164" Background="White"  Foreground="Black" ToolBarTray.IsLocked="True" Grid.ColumnSpan="3">
+            <Button x:Name="btnChangePath" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" Click="OnChoosePath">
+                <Image x:Name="imgChoosePath" Source="images/iconmonstr-folder-search-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Select the Path and Extension</ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Separator/>
+            <Button x:Name="btnStart" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="False" Click="OnStart">
+                <Image x:Name="imgStartFW" Source="images/iconmonstr-circle-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Start Filewatcher</ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="btnStop" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="False" Click="OnStop">
+                <Image x:Name="imgStopFW" Source="images/iconmonstr-square-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Stop Filewatcher</ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Separator/>
+            <Button x:Name="btnRead" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" Click="OnReadDatabase">
+                <Image x:Name="imgReadDB" Source="images/iconmonstr-database-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>View Database Results</ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Button x:Name="btnWrite" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="False" Click="OnWriteDatabase">
+                <Image x:Name="imgWriteDB" Source="images/iconmonstr-database-write-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Add Results to the Database</ToolTip>
+                </Button.ToolTip>
+            </Button>
+            <Separator/>
+            <Button x:Name="btnExit" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" Click="OnExit">
+                <Image x:Name="imgExit" Source="images/iconmonstr-exit-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Exit the program</ToolTip>
+                </Button.ToolTip>
+            </Button>
+        </ToolBar>
+
+        <!--Main Area-->
+        <Label x:Name="lblPath" Content="Filewatch Path:" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="25" Background="LightGray"  Foreground="Black"/>
+        <TextBox x:Name="tbPath" Text=""  HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="25" Margin="103,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="505" IsReadOnly="True" Grid.ColumnSpan="3" Background="White"  Foreground="Black"/>
+        <Label x:Name="lblExtension" Content="Extension:" HorizontalAlignment="Left" Margin="209,65,0,0" VerticalAlignment="Top" Height="25" Grid.Column="2" Background="LightGray"  Foreground="Black"/>
+        <TextBox x:Name="tbExtension" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="25" Margin="277,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" IsReadOnly="True" Grid.Column="2" Background="White"  Foreground="Black"/>
+
+        <ListView x:Name="lvData" HorizontalAlignment="Left" Height="425" Margin="20,100,0,0" VerticalAlignment="Top" Width="1125" Grid.ColumnSpan="3" Background="White"  Foreground="Black">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Timestamp" Width="125" DisplayMemberBinding="{Binding Timestamp}" />
+                    <GridViewColumn Header="Name" Width="250" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Action" Width="75" DisplayMemberBinding="{Binding Action}" />
+                    <GridViewColumn Header="Absolute Path" Width="684" DisplayMemberBinding="{Binding AbsolutePath}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--StatusBar-->
+        <StatusBar x:Name="statusBar" HorizontalAlignment="Left" Height="30" VerticalAlignment="Bottom" Grid.ColumnSpan="3"  Background="LightGray"  Foreground="Black">
+            <StatusBarItem x:Name="sbStatus" Content="Status: " VerticalAlignment="Center" Margin="0,0,10,0" HorizontalContentAlignment="Right" Height="24" Width="50"/>
+            <StatusBarItem x:Name="sbMonitorStatus" Content="Ready" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Width="1122" Margin="0,0,0,0" />
+        </StatusBar>
+
+    </Grid>
+</Window>

@@ -1,0 +1,273 @@
+﻿<Window x:Class="campbelljproj2d.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:campbelljproj2d"
+        mc:Ignorable="d"
+        Title="Trivia Maze"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Height="910" 
+        Width="785"
+        >
+    <StackPanel Orientation="Vertical" Background="White">
+        <!--Main Menu-->
+        <Menu x:Name="mainMenu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="792" Background="LightGray" Foreground="Black" Grid.Row="1">
+            <!--File-->
+            <MenuItem x:Name="menuItemFile" Header="_File" Foreground="Black">
+
+                <!--New Game-->
+                <MenuItem x:Name="menuItemNew" Header="_New Game" IsEnabled="True" Foreground="Black" Click="OnNew">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Start a New Game</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <!--Save Game-->
+                <MenuItem x:Name="menuItemSave" Header="_Save Game" IsEnabled="False" Foreground="Black" Click="OnSave">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Save the Game</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <!--Load Game-->
+                <MenuItem x:Name="menuItemLoad" Header="_Load Game" IsEnabled="True" Foreground="Black" Click="OnLoad">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Load the Game</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <!--Quit Game-->
+                <MenuItem x:Name="menuItemQuit" Header="_Quit Game" IsEnabled="False" Foreground="Black" Click="OnQuit">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Quit the Current Game</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <Separator />
+                <!--Exit Game-->
+                <MenuItem x:Name="menuItemExit" Header="E_xit" IsEnabled="True" Foreground="Black" Click="OnExit">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Exit the Game</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+            <!--Settings
+            <MenuItem x:Name="menuItemSettings" Header="S_ettings" Foreground="Black">
+
+            </MenuItem>-->
+
+            <!--Help-->
+            <MenuItem x:Name="menuItemHelp" Header="_Help">
+                <!--Instructions-->
+                <MenuItem x:Name="menuItemInstructions" Header="_Instructions" Click="OnInstructions">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Game Instructions</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <!--About-->
+                <MenuItem x:Name="menuItemUpdateDB" Header="_Admin Mode: Update Database" IsEnabled="False" Click="OnUpdateDatabase">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Admin Tool to update the Database tables from text files</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <!--About-->
+                <MenuItem x:Name="menuItemAbout" Header="_About" Click="OnAbout">
+                    <MenuItem.ToolTip>
+                        <ToolTip>About the Game</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+
+        </Menu>
+
+        <!--Toolbar-->
+        <ToolBar x:Name="toolBar" HorizontalAlignment="Left" Height="40" Margin="0,0,0,0" VerticalAlignment="Top" Width="792" Background="White"  Foreground="Black" ToolBarTray.IsLocked="True" Grid.Row="2">
+
+            <!--New-->
+            <Button x:Name="btnNew" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="True" Click="OnNew">
+                <Image x:Name="imgNew" Source="icons/iconmonstr-file-2-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Start New Game</ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <!--Save-->
+            <Button x:Name="btnSave" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="False" Click="OnSave">
+                <Image x:Name="imgSave" Source="icons/iconmonstr-save-5-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Save Game</ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <!--Load/Open-->
+            <Button x:Name="btnLoad" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="True" Click="OnLoad">
+                <Image x:Name="imgLoad" Source="icons/iconmonstr-share-8-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Load Game</ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+
+            <!--Instructions-->
+            <Button x:Name="btnInstructions" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="True" Click="OnInstructions">
+                <Image x:Name="imgInstructions" Source="icons/iconmonstr-info-11-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Load Game</ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <!--About-->
+            <Button x:Name="btnAbout" Height="32" VerticalAlignment="Center" Width="32" Margin="10,0,10,0" IsEnabled="True" Click="OnAbout">
+                <Image x:Name="imgAbout" Source="icons/iconmonstr-info-10-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Load Game</ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+
+            <!--Exit-->
+            <Button x:Name="btnExit" Height="32" VerticalAlignment="Center" Width="32" Margin="20,0,20,0" IsEnabled="True" Click="OnExit">
+                <Image x:Name="imgReadDB" Source="icons/iconmonstr-door-6-48.png"/>
+                <Button.ToolTip>
+                    <ToolTip>Exit the Game</ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+
+        </ToolBar>
+
+        <!--GameArea-->
+        <Canvas 
+            x:Name="myCanvas"
+            IsEnabled="True"
+            MouseDown="OnMouseDownCanvas"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Grid.Row="3"
+            Background="Transparent"
+            Margin="0,0,0,0"          
+            Width="720"
+            Height="720">
+        </Canvas>
+
+        <!--StatusBar-->
+        <StatusBar 
+            x:Name="statusBar1" 
+            Grid.Row="4" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom" 
+            Width="779"
+            Height="50" 
+            Background="LightGray"  
+            Foreground="Black">
+
+            <StatusBarItem 
+                x:Name="sbPlayerNameLabel" 
+                Content=" Player:" 
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="0,10,0,0" 
+                Width="64"
+                Height="30" 
+                FontSize="18"/>
+
+            <StatusBarItem 
+                x:Name="sbPlayerName" 
+                Content="" 
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="0,10,0,0" 
+                Width="170"
+                Height="30" 
+                FontSize="18"/>
+
+            <Separator/>
+
+            <StatusBarItem 
+                x:Name="sbPlayerModeLable" 
+                Content="Mode:" 
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="10,10,0,0" 
+                Width="60"
+                Height="30" 
+                FontSize="18"/>
+
+            <StatusBarItem 
+                x:Name="sbPlayerMode" 
+                Content="" 
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="0,10,0,0" 
+                Width="417"
+                Height="30" 
+                FontSize="18"/>
+
+        </StatusBar>
+
+        <StatusBar 
+            x:Name="statusBar2" 
+            Grid.Row="5" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom" 
+            Width="779"
+            Height="50" 
+            Background="LightGray"  
+            Foreground="Black">
+
+            <StatusBarItem 
+                x:Name="sbCurrentLocationLabel"
+                Content="Current Location:" 
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Right"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Margin="0,10,0,0" 
+                Width="145" 
+                Height="30" 
+                FontSize="18"/>
+
+            <StatusBarItem 
+                x:Name="sbCurrentLocation"
+                Content="" 
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Margin="0,10,0,0" 
+                Width="262" 
+                Height="30" 
+                FontSize="18"/>
+
+            <Separator/>
+
+            <StatusBarItem 
+                x:Name="sbStatusContentLabel"
+                Content="Status:" 
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Right"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Margin="0,10,0,0" 
+                Width="61" 
+                Height="30" 
+                FontSize="18"/>
+
+            <StatusBarItem 
+                x:Name="sbStatusContent"
+                Content="Start or Load Game" 
+                HorizontalAlignment="Left"
+                HorizontalContentAlignment="Left"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Center"
+                Margin="0,10,0,0" 
+                Width="296" 
+                Height="30" 
+                FontSize="18"/>
+
+        </StatusBar>
+        
+
+    </StackPanel>
+</Window>

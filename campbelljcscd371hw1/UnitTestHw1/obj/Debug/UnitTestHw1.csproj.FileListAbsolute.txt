@@ -1,0 +1,17 @@
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\obj\Debug\UnitTestHw1.csprojAssemblyReference.cache
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\obj\Debug\UnitTestHw1.csproj.CoreCompileInputs.cache
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\UnitTestHw1.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\UnitTestHw1.pdb
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\campbelljcscd371hw1.pdb
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\obj\Debug\UnitTestHw1.csproj.CopyComplete
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\obj\Debug\UnitTestHw1.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\obj\Debug\UnitTestHw1.pdb
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\campbelljcscd371hw1.dll
+C:\Users\jcryu\source\repos\campbelljcscd371hw1\UnitTestHw1\bin\Debug\campbelljcscd371hw1.dll.config
